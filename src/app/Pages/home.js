@@ -64,14 +64,8 @@ export default function Home() {
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
                 <div className="flex mt-8 gap-3">
-                  <img
-                    src="/Living-Room-2.jpg"
-                    className="rounded-lg w-full h-40"
-                  />
-                  <img
-                    src="/Living-Room-1.png"
-                    className="rounded-lg w-full h-40"
-                  />
+                  <img src="/image2.jpg" className="rounded-lg w-full h-40" />
+                  <img src="/image1.jpg" className="rounded-lg w-full h-40" />
                 </div>
               </div>
             </div>
