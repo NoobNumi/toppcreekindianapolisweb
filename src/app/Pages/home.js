@@ -69,7 +69,7 @@ export default function Home() {
                     className="rounded-lg w-full h-40"
                   />
                   <img
-                    src="/Living-Room-1.jpg"
+                    src="/Living-Room-1.png"
                     className="rounded-lg w-full h-40"
                   />
                 </div>
