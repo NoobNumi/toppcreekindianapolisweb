@@ -1,24 +1,156 @@
 @import "tailwindcss";
-
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary: #0097b2;
+  --secondary: #0d2938;
+  --white: #fff;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
+  background-image: repeating-radial-gradient(
+      circle at center center,
+      transparent 0px,
+      transparent 13px,
+      rgba(0, 0, 0, 0.03) 13px,
+      rgba(0, 0, 0, 0.03) 24px,
+      transparent 24px,
+      transparent 62px,
+      rgba(0, 0, 0, 0.03) 62px,
+      rgba(0, 0, 0, 0.03) 96px
+    ),
+    repeating-radial-gradient(
+      circle at center center,
+      rgb(255, 255, 255) 0px,
+      rgb(255, 255, 255) 14px,
+      rgb(255, 255, 255) 14px,
+      rgb(255, 255, 255) 18px,
+      rgb(255, 255, 255) 18px,
+      rgb(255, 255, 255) 28px,
+      rgb(255, 255, 255) 28px,
+      rgb(255, 255, 255) 32px
+    );
+  background-size: 21px 21px;
+  position: relative;
+}
+
+.home {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-white {
+  background: var(--white);
+  color: var(--secondary);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.overlay-card {
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease;
+}
+
+.overlay-card:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.bg-primary {
+  background: var(--primary);
+  color: #ffff;
+}
+
+#booking-iframe {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: white;
+  padding: 25px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-mask {
+  --size: 310px;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent calc(var(--size) * 0),
+    rgba(0, 0, 0, 0.077) calc(var(--size) * 0.133),
+    rgba(0, 0, 0, 0.175) calc(var(--size) * 0.249),
+    rgba(0, 0, 0, 0.286) calc(var(--size) * 0.352),
+    rgba(0, 0, 0, 0.407) calc(var(--size) * 0.444),
+    rgba(0, 0, 0, 0.529) calc(var(--size) * 0.528),
+    rgba(0, 0, 0, 0.649) calc(var(--size) * 0.606),
+    rgba(0, 0, 0, 0.76) calc(var(--size) * 0.681),
+    rgba(0, 0, 0, 0.856) calc(var(--size) * 0.755),
+    rgba(0, 0, 0, 0.932) calc(var(--size) * 0.831),
+    rgba(0, 0, 0, 0.982) calc(var(--size) * 0.912),
+    #000 calc(var(--size) * 1)
+  );
+}
+
+.css-1ueqzyg {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 20%;
+  width: 400px;
+  height: 400px;
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  background: radial-gradient(circle at 50% 50%, #0097b2, #444bf700);
+  opacity: 0.4;
+}
+
+.css-10gqqxt {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 34%;
+  left: 80%;
+  width: 300px;
+  height: 300px;
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  background: radial-gradient(circle at 50% 50%, #0097b2, #4c00ff00);
+  opacity: 0.4;
+  z-index: 0;
 }
