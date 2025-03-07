@@ -51,7 +51,7 @@ export default function Properties() {
           <Link href="/properties/2" className="relative property-card">
             <div className="card text-start relative">
               <img
-                src="/Living-Room-1.jpeg"
+                src="/Living-Room-1.jpg"
                 className="rounded-lg w-full h-70 object-cover"
               />
               <div className="overlay-card absolute w-full h-full bottom-0 rounded-lg">
