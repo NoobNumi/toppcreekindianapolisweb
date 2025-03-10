@@ -4,7 +4,7 @@ export default function Footer() {
       <span className="text-sm text-white sm:text-center">
         © 2025{" "}
         <a href="/" className="hover:underline">
-          Topp Creeks Indianapolis
+          Topp Creeks Properties
         </a>
         . All Rights Reserved.
       </span>

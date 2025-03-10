@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Top Creek Indianapolis",
+  title: "Topp Creek Indianapolis",
 };
 
 export default function RootLayout({ children }) {

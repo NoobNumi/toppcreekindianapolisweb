@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import CustomMap from "../components/CustomMap";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -57,14 +58,15 @@ export default function Contact() {
             className="relative w-full overflow-hidden rounded-lg md:max-w-[500px]"
             style={{ aspectRatio: "4 / 3" }}
           >
-            <iframe
+            {/* <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203903.48186681385!2d-86.29755811474115!3d39.7796679467037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b50ffa7796a03%3A0xd68e9df640b9ea7c!2sIndianapolis%2C%20IN%2C%20USA!5e1!3m2!1sen!2sph!4v1741262237340!5m2!1sen!2sph"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
-              className="w-full md:max-w-[500px] max-w-full h-full max-h-[700px]"
+             
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+            ></iframe> */}
+            <CustomMap className="w-full md:max-w-[500px] max-w-full h-full max-h-[700px]" />
           </div>
           <div
             className="bg-white p-6 rounded-lg min-w-44"

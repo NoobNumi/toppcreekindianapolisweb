@@ -31,7 +31,7 @@ export default function Page() {
         <About />
         <Reviews />
         <Contact />
-        <Footer></Footer>
+        <Footer />
       </AOSWrapper>
     </div>
   );
