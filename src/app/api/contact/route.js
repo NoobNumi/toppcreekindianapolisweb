@@ -4,14 +4,15 @@ export async function POST(req) {
   try {
     const { name, email, subject, message } = await req.json();
 
-    // Nodemailer transporter setup for Namecheap Private Email
+    // Nodemailer transporter setup for Google Workspace (Gmail Business)
     const transporter = nodemailer.createTransport({
-      host: "mail.privateemail.com", // Namecheap's mail server
-      port: 465, // Secure SSL port
+      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
       secure: true, // Must be true for port 465
       auth: {
-        user: process.env.EMAIL_USER, // Your Namecheap email
-        pass: process.env.EMAIL_PASS, // Your Namecheap email password
+        user: process.env.EMAIL_USER, // booking@toppcreeksales.com
+        pass: process.env.EMAIL_PASS, // App password or OAuth2 token
       },
     });
 

@@ -70,7 +70,10 @@ export default function Home() {
                   className="rounded-lg"
                   referrerPolicy="no-referrer-when-downgrade"
                 ></iframe> */}
-                <MapHome className="rounded-lg h-96 w-96" />
+                <MapHome
+                  className="rounded-lg"
+                  style={{ width: "100px", height: "200px" }}
+                />
                 <div className="flex mt-8 gap-3">
                   <img src="/image2.jpg" className="rounded-lg w-full h-40" />
                   <img src="/image1.jpg" className="rounded-lg w-full h-40" />

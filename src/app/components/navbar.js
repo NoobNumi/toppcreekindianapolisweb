@@ -32,7 +32,6 @@ const Navbar = () => {
       setActiveLink(currentSection);
     };
 
-    // Set active link if in /properties page
     if (pathname.startsWith("/properties/")) {
       setActiveLink("#properties");
     } else {
@@ -44,9 +43,16 @@ const Navbar = () => {
     };
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   const handleLinkClick = (href) => {
     setActiveLink(href);
-    setIsOpen(false); // Close mobile menu on link click
+    setIsOpen(false);
   };
 
   const getCorrectHref = (hash) =>
@@ -64,7 +70,6 @@ const Navbar = () => {
         />
       </Link>
 
-      {/* Mobile Menu Button */}
       <button className="xl:hidden text-2xl" onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? (
           <svg
@@ -101,10 +106,10 @@ const Navbar = () => {
         )}
       </button>
 
-      {/* Desktop Menu */}
       <div className="hidden xl:flex items-center bg-white rounded-full py-2 px-2 gap-4">
         {[
           { href: "/", label: "Home" },
+          { href: getCorrectHref("#attractions"), label: "Attractions" },
           { href: "#properties", label: "Properties" },
           { href: getCorrectHref("#about"), label: "About Us" },
           { href: getCorrectHref("#contact"), label: "Contact" },
@@ -122,7 +127,6 @@ const Navbar = () => {
         ))}
       </div>
 
-      {/* Book Button (Visible on Desktop) */}
       <a
         className="hidden xl:block btn btn-primary rounded-full px-8 py-3"
         href="#properties"
@@ -130,11 +134,10 @@ const Navbar = () => {
         Book your stay
       </a>
 
-      {/* Mobile Sidebar Menu */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform ${
+        className={`fixed top-0 left-0 h-svh w-64 bg-white shadow-lg transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } transition-transform duration-300 ease-in-out xl:hidden`}
+        } transition-transform duration-300 ease-in-out xl:hidden z-50`}
       >
         <button
           className="absolute top-4 right-4 text-2xl"
@@ -158,6 +161,7 @@ const Navbar = () => {
         <div className="flex flex-col items-start p-6 gap-4 mt-12">
           {[
             { href: "/", label: "Home" },
+            { href: getCorrectHref("#attractions"), label: "Attractions" },
             { href: "#properties", label: "Properties" },
             { href: getCorrectHref("#about"), label: "About Us" },
             { href: getCorrectHref("#contact"), label: "Contact" },
@@ -165,7 +169,7 @@ const Navbar = () => {
             <Link
               key={item.href}
               href={item.href}
-              className="px-6 py-2 w-full text-left hover:bg-gray-200"
+              className="px-6 py-2 w-full text-left hover:bg-gray-200 rounded-xl"
               onClick={() => handleLinkClick(item.href)}
             >
               {item.label}

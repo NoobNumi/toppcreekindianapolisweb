@@ -1,6 +1,6 @@
 import Home from "./Pages/home";
 import Property from "./Pages/properties";
-import Amenities from "./Pages/ammenities";
+import Attractions from "./Pages/attractions";
 import AOSWrapper from "./components/AOSWrapper";
 import About from "./Pages/about";
 import Contact from "./Pages/contact";
@@ -26,7 +26,7 @@ export default function Page() {
           ></div>
         </div>
         <Home />
-        <Amenities />
+        <Attractions />
         <Property />
         <About />
         <Reviews />
