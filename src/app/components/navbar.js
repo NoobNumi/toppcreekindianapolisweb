@@ -109,8 +109,8 @@ const Navbar = () => {
       <div className="hidden xl:flex items-center bg-white rounded-full py-2 px-2 gap-4">
         {[
           { href: "/", label: "Home" },
-          { href: getCorrectHref("#attractions"), label: "Attractions" },
           { href: "#properties", label: "Properties" },
+          { href: getCorrectHref("#attractions"), label: "Attractions" },
           { href: getCorrectHref("#about"), label: "About Us" },
           { href: getCorrectHref("#contact"), label: "Contact" },
         ].map((item) => (
@@ -161,8 +161,8 @@ const Navbar = () => {
         <div className="flex flex-col items-start p-6 gap-4 mt-12">
           {[
             { href: "/", label: "Home" },
-            { href: getCorrectHref("#attractions"), label: "Attractions" },
             { href: "#properties", label: "Properties" },
+            { href: getCorrectHref("#attractions"), label: "Attractions" },
             { href: getCorrectHref("#about"), label: "About Us" },
             { href: getCorrectHref("#contact"), label: "Contact" },
           ].map((item) => (

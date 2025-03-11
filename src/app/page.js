@@ -26,8 +26,8 @@ export default function Page() {
           ></div>
         </div>
         <Home />
-        <Attractions />
         <Property />
+        <Attractions />
         <About />
         <Reviews />
         <Contact />
