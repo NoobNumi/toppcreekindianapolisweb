@@ -13,6 +13,25 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Topp Creek Indianapolis",
+  description: "A brief description of your website.",
+  openGraph: {
+    title: "Your Website Title",
+    description: "A brief description of your website.",
+    url: "https://toppcreekindianapolis.com/",
+    type: "website",
+    images: [
+      {
+        url: "/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/thumbnail.png"],
+  },
 };
 
 export default function RootLayout({ children }) {

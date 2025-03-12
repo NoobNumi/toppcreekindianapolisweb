@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <section
-        className="relative h-[90vh] bg-cover bg-center p-4"
+        className="relative md:h-[90vh] bg-cover bg-center p-4"
         id="home"
         data-aos="fade-up"
       >
@@ -24,11 +24,11 @@ export default function Home() {
             <div className="flex flex-col xl:flex-row w-full items-center md:items-start justify-center px-5 md:px-23 mt-18 md:mt-24">
               <div className="mx-auto text-start">
                 <h1 className="text-4xl md:text-6xl font-medium text-white mx-auto mr-0 md:mr-18">
-                  Make yourself at home at the heart of Indy!
+                  Make yourself at home in the heart of Indy!
                 </h1>
                 <p className="text-base md:text-lg font-medium text-white mx-auto mt-4 mr-0 md:mr-43">
-                  Whether you’re here for business or leisure, our property is
-                  the ideal retreat for a memorable stay.
+                  Whether you’re here for business or leisure, our properties
+                  are the ideal retreat for a memorable stay.
                 </p>
                 <div className="flex flex-col md:flex-row mt-8 gap-3">
                   <a

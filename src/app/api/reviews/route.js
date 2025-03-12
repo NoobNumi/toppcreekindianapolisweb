@@ -5,8 +5,6 @@ export async function GET() {
     );
     const data = await response.json();
 
-    console.log("Fetched reviews:", data); // Check if new reviews appear
-
     return Response.json(data, { status: 200 });
   } catch (error) {
     console.error("Error fetching reviews:", error);
