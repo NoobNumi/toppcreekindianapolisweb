@@ -29,6 +29,7 @@ export default function Properties() {
                 width={100}
                 height={100}
                 alt="Property 1"
+                loading="lazy"
               />
               <div className="overlay-card absolute w-full h-full bottom-0 rounded-lg">
                 <div className="card-body text-white absolute bottom-0 p-4">

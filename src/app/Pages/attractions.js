@@ -81,6 +81,7 @@ export default function Attractions() {
                     className="w-full h-90 object-cover rounded-lg"
                     width={100}
                     height={100}
+                    loading="lazy"
                   />
                 </div>
                 <div className="glass absolute bottom-1 w-96 left-1/2 transform -translate-x-1/2 py-3 rounded-sm text-center shadow-md z-20">

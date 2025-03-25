@@ -68,6 +68,7 @@ const Navbar = () => {
           alt="Logo"
           height={150}
           width={150}
+          loading="lazy"
         />
       </Link>
 

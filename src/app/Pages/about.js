@@ -18,7 +18,9 @@ export default function About() {
               src="/about-host.png"
               alt="About Us"
               className="rounded-full h-full w-full object-cover"
-              fill
+              width={100}
+              height={100}
+              loading="lazy"
             />
             {/* SVG Badge */}
             <div
