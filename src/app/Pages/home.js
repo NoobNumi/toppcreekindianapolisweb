@@ -76,8 +76,8 @@ export default function Home() {
                   style={{ width: "100px", height: "200px" }}
                 />
                 <div className="flex mt-8 gap-3">
-                  <Image src="/image2.jpg" width={100} height={40} alt="image1" className="rounded-lg w-full h-40" loading="lazy"/>
-                  <Image src="/image1.jpg" width={100} height={40} alt="image2" className="rounded-lg w-full h-40" loading="lazy"/>
+                  <img src="/image2.jpg" alt="image1" className="rounded-lg w-full h-40"/>
+                  <img src="/image1.jpg" alt="image2" className="rounded-lg w-full h-40"/>
                 </div>
               </div>
             </div>
