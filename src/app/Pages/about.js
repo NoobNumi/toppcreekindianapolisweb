@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+
 export default function About() {
   return (
     <section
@@ -12,10 +14,11 @@ export default function About() {
         {/* Image Container */}
         <div className="flex items-center justify-center w-full flex-col">
           <div className="h-30 w-30 relative">
-            <img
+            <Image
               src="/about-host.png"
               alt="About Us"
               className="rounded-full h-full w-full object-cover"
+              fill
             />
             {/* SVG Badge */}
             <div

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Properties() {
   return (
@@ -22,9 +23,12 @@ export default function Properties() {
         <div className="flex flex-col md:flex-row justify-center gap-10 w-full mt-14 mx-auto">
           <Link href="/properties/1" className="relative property-card">
             <div className="card text-start relative">
-              <img
+              <Image
                 src="/image2.jpg"
                 className="rounded-lg w-full h-70 object-cover"
+                width={100}
+                height={100}
+                alt="Property 1"
               />
               <div className="overlay-card absolute w-full h-full bottom-0 rounded-lg">
                 <div className="card-body text-white absolute bottom-0 p-4">
@@ -50,9 +54,12 @@ export default function Properties() {
           </Link>
           <Link href="/properties/2" className="relative property-card">
             <div className="card text-start relative">
-              <img
+              <Image
                 src="/image1.jpg"
                 className="rounded-lg w-full h-70 object-cover"
+                width={100}
+                height={100}
+                alt="Property 2"
               />
               <div className="overlay-card absolute w-full h-full bottom-0 rounded-lg">
                 <div className="card-body text-white absolute bottom-0 p-4">

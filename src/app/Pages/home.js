@@ -2,6 +2,7 @@
 
 import Navbar from "../components/navbar.js";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 const MapHome = dynamic(
   () => import("../components/MapHome").then((mod) => mod.default),
   { ssr: false }
@@ -75,8 +76,8 @@ export default function Home() {
                   style={{ width: "100px", height: "200px" }}
                 />
                 <div className="flex mt-8 gap-3">
-                  <img src="/image2.jpg" className="rounded-lg w-full h-40" />
-                  <img src="/image1.jpg" className="rounded-lg w-full h-40" />
+                  <Image src="/image2.jpg" width={100} height={100} alt="image1" className="rounded-lg w-full h-40" />
+                  <Image src="/image1.jpg" width={100} height={100} alt="image2" className="rounded-lg w-full h-40" />
                 </div>
               </div>
             </div>

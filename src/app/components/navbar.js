@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +62,7 @@ const Navbar = () => {
   return (
     <nav className="flex w-full justify-between items-center px-5 py-4">
       <Link href="/">
-        <img
+        <Image
           src="/logo.png"
           className="rounded-full bg-white py-2 px-3"
           alt="Logo"

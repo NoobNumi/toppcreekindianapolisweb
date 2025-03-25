@@ -4,6 +4,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
+import Image from "next/image";
 
 export default function Attractions() {
   const attractions = [
@@ -74,10 +75,12 @@ export default function Attractions() {
                 style={{ cursor: "grab" }}
               >
                 <div className="relative rounded-lg overflow-visible">
-                  <img
+                  <Image
                     src={place.image}
                     alt={place.name}
                     className="w-full h-90 object-cover rounded-lg"
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="glass absolute bottom-1 w-96 left-1/2 transform -translate-x-1/2 py-3 rounded-sm text-center shadow-md z-20">
