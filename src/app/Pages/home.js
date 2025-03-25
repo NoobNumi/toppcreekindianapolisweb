@@ -2,7 +2,6 @@
 
 import Navbar from "../components/navbar.js";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 const MapHome = dynamic(
   () => import("../components/MapHome").then((mod) => mod.default),
   { ssr: false }
